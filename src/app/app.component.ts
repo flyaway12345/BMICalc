@@ -10,11 +10,21 @@ export class AppComponent {
   feet: number = null;
   inch: number = null;
   weight: number = null;
+  metricSwitch: boolean = false;
+  meter: number = null;
+  kilogram: number = null;
   
   calc(){
+    if(this.metricSwitch){
     let meter = ((this.feet * 12)+this.inch) * 0.0254;
     let kilogram = this.weight * 0.45359237;
-    return Math.round(((kilogram/(Math.pow(meter,2)))*100));
+    }else{
+      let meter = this.meter;
+      let kilogram = this.kilogram;
+    }
+    return Math.round(((this.kilogram/(Math.pow(this.meter,2)))*100));
   }
-
+  switchDisplay(){
+    this.metricSwitch = !this.metricSwitch;
+  }
 }

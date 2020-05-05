@@ -4,6 +4,17 @@
 }
 
 .x{
-    width: 15%;
+    width: 20%;
     background-color: rgb(199, 190, 177);
+    box-shadow: 5px 10px 8px black;
+}
+button{
+    float: right;
+    margin: 10px;
+}
+div{
+    margin: auto;
+}
+h3{
+    margin: auto;
 }
