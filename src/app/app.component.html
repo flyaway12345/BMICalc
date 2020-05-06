@@ -1,62 +1,59 @@
 
 
-<div class="x"
+<div class="container"
 *ngIf="metricSwitch">
-<div class="row">
+<div class="row bg-primary text-white">
   <div class="col-md-4">  
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-      <h1>{{title}} <button (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button></h1>
-    </header>
+    <button class="btn btn-danger" (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button>
+   
+    <h1>{{title}} </h1>
   </div>
 </div> 
-    <ul>
-      <li>
-        <h4>Height:Kilograms</h4>
-        <input [(ngModel)]="kilogram" type="text">
-      </li>
-      <li>
-        <h4>Weight: Meters</h4>
-        <input [(ngModel)]="meter" type="text">
-      </li>
-    </ul>
-
-<h4>BMI Total: {{calc()}} </h4>
+  <div class="">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>&nbsp;&nbsp;Centimeters</h4>
+        <input class="form-control" [(ngModel)]="meter" type="number">
+      </div>
+        <div class="col-md-6">
+        <h4>&nbsp;&nbsp;Kilograms</h4>
+        <input class="form-control" [(ngModel)]="kilogram" type="number">
+      </div></div>
+ <div class="row">
+   &nbsp;
+ </div>   
+<button class="btn btn-primary" (click)='calc()'> Calculate</button>
+<h4>BMI Total: {{answer}} </h4>
+</div>
 </div>
 
-<div class="x"
+<div class="container"
 *ngIf="!metricSwitch">
-<div class="row">
+<div class="row bg-primary text-white">
   <div class="col-md-4">  
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-      <h1>{{title}} <button (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button></h1>
-    </header>
+    
+      <h1>{{title}} </h1>
+      <button class="btn btn-danger" (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button>
   </div>
-</div>
-<ol>
-  
-  <li>
-    <h3>Height</h3>
-    <ul>
-      <li>
-        <h4>Feet</h4>
-        <input [(ngModel)]="feet" type="text">
-      </li>
-      <li>
-        <h4>Inches</h4>
-        <input [(ngModel)]="inch" type="text">
-      </li>
-    </ul>
-  </li>
-  <li>
-    <h3>Weight</h3>
-    <ul>
-      <li>
-        <h4>Pounds</h4>
-        <input [(ngModel)]="weight" type="text">
-      </li>
-    </ul>
-  </li>
-</ol>
-
-<h4>BMI Total: {{calc()}} </h4>
+</div>   
+    <div class="row x">
+      <div class="col-md-4">
+        <h4>&nbsp;&nbsp;Feet</h4>
+        <input class="form-control" [(ngModel)]="feet" type="number">
+      </div>
+      <div class="col-md-4">
+        <h4>&nbsp;&nbsp;Inches</h4>
+        <input class="form-control" [(ngModel)]="inch" type="number">
+      </div>
+      <div class="col-md-4">
+        <h4>&nbsp;&nbsp;Pounds</h4>
+        <input class="form-control" [(ngModel)]="weight" type="number">
+        <div class="row">
+      </div>
+    </div> 
+        
+          &nbsp;
+        </div> 
+<button class="btn btn-primary" (click)='calc()'> Calculate</button>
+<h4>BMI Total: {{answer}} </h4>
 </div>

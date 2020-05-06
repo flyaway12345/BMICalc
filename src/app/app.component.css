@@ -1,20 +1,16 @@
-.navbar{
-    background-color: steelblue;
-    
+.btn-danger{
+    margin:0.5em;
+}
+.btn-primary{
+   float: right; 
 }
 
-.x{
-    width: 20%;
-    background-color: rgb(199, 190, 177);
-    box-shadow: 5px 10px 8px black;
+h1{
+    float: left;
 }
-button{
-    float: right;
-    margin: 10px;
+.col-md-4{
+    margin-top: 0.5em;
 }
-div{
-    margin: auto;
-}
-h3{
-    margin: auto;
+.col-md-6{
+    margin-top: 1em;
 }
