@@ -4,7 +4,7 @@
 *ngIf="metricSwitch">
 <div class="row bg-primary text-white">
   <div class="col-md-4">  
-    <button class="btn btn-danger" (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button>
+    <button class="btn btn-danger btnD" (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button>
    
     <h1>{{title}} </h1>
   </div>
@@ -33,7 +33,7 @@
   <div class="col-md-4">  
     
       <h1>{{title}} </h1>
-      <button class="btn btn-danger" (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button>
+      <button class="btn btn-danger btnD" (click)="switchDisplay()" >{{metricSwitch ? 'Metric' : 'English'}}</button>
   </div>
 </div>   
     <div class="row x">
@@ -57,3 +57,10 @@
 <button class="btn btn-primary" (click)='calc()'> Calculate</button>
 <h4>BMI Total: {{answer}} </h4>
 </div>
+<div class="row">
+  <div class="col-md-5"></div>
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-5"><button class="btn btn-danger  btnD2" (click)='showImageClick()'> BMI Chart</button></div>
+</div>
+<img src="../assets/Chart.jpg" alt="" *ngIf="showImage" height="auto" width="auto">

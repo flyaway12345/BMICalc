@@ -12,6 +12,7 @@ export class AppComponent {
   inch: number;
   weight: number;
   metricSwitch: boolean = false;
+  showImage: boolean = false;
   meter: number;
   kilogram: number;
   
@@ -25,8 +26,6 @@ export class AppComponent {
     console.log(meter + " " + kilogram);
     this.answer = (Math.round((kilogram/(Math.pow(meter,2))*703) * 100))/100;
     }else{
-      
-      
       this.answer = (Math.round((this.kilogram/(Math.pow(this.meter/100,2))) * 100))/100;     
     }
     
@@ -35,7 +34,9 @@ export class AppComponent {
   switchDisplay(){
     this.metricSwitch = !this.metricSwitch;
     this.answer = '';
-    console.log(`switch to ${this.metricSwitch}`)
 
+  }
+  showImageClick(){
+    this.showImage = !this.showImage;
   }
 }
